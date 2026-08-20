@@ -1,0 +1,3446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta name="theme-color" content="#f5dce8">
+
+    <title>For Diuu ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            font-family:
+                "Trebuchet MS",
+                "Comic Sans MS",
+                cursive;
+        }
+
+        /* =====================================================
+   APP
+===================================================== */
+
+        #app {
+            position: relative;
+            width: 100%;
+            height: 100dvh;
+            overflow: hidden;
+
+            background:
+                radial-gradient(circle at 50% 20%,
+                    #fff9fc 0%,
+                    #ffeaf3 25%,
+                    #efd8e8 55%,
+                    #c8c4df 100%);
+        }
+
+        /* =====================================================
+   BACKGROUND
+===================================================== */
+
+        .glow {
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            left: 50%;
+            top: 25%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+
+            background:
+                rgba(255, 255, 255, .35);
+
+            filter: blur(30px);
+        }
+
+        .moon {
+            position: absolute;
+            right: 22px;
+            top: 30px;
+
+            width: 62px;
+            height: 62px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(circle at 35% 30%,
+                    #fff,
+                    #fff0d7);
+
+            box-shadow:
+                0 0 20px rgba(255, 255, 255, .9),
+                0 0 60px rgba(255, 190, 220, .7);
+
+            z-index: 4;
+
+            animation:
+                moonFloat 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes moonFloat {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(8px);
+            }
+        }
+
+        /* =====================================================
+   STARS
+===================================================== */
+
+        .stars {
+            position: absolute;
+            inset: 0;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        .stars span {
+            position: absolute;
+            color: white;
+
+            text-shadow:
+                0 0 8px white,
+                0 0 15px #ffc7df;
+
+            animation:
+                twinkle 2s infinite alternate;
+        }
+
+        .stars span:nth-child(1) {
+            left: 8%;
+            top: 18%;
+        }
+
+        .stars span:nth-child(2) {
+            left: 23%;
+            top: 28%;
+            animation-delay: .4s;
+        }
+
+        .stars span:nth-child(3) {
+            left: 42%;
+            top: 13%;
+            animation-delay: .8s;
+        }
+
+        .stars span:nth-child(4) {
+            left: 62%;
+            top: 25%;
+            animation-delay: 1.1s;
+        }
+
+        .stars span:nth-child(5) {
+            left: 80%;
+            top: 15%;
+            animation-delay: .6s;
+        }
+
+        .stars span:nth-child(6) {
+            left: 90%;
+            top: 34%;
+            animation-delay: 1.4s;
+        }
+
+        .stars span:nth-child(7) {
+            left: 50%;
+            top: 35%;
+            animation-delay: 1.8s;
+        }
+
+        @keyframes twinkle {
+            from {
+                opacity: .25;
+                transform: scale(.7);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+        /* =====================================================
+   CLOUDS
+===================================================== */
+
+        .cloud {
+            position: absolute;
+
+            width: 110px;
+            height: 30px;
+
+            background: rgba(255, 255, 255, .45);
+
+            border-radius: 50px;
+
+            z-index: 5;
+
+            animation:
+                cloudMove 30s linear infinite;
+        }
+
+        .cloud::before,
+        .cloud::after {
+            content: "";
+            position: absolute;
+
+            background: rgba(255, 255, 255, .45);
+
+            border-radius: 50%;
+        }
+
+        .cloud::before {
+            width: 45px;
+            height: 45px;
+
+            left: 18px;
+            bottom: 0;
+        }
+
+        .cloud::after {
+            width: 55px;
+            height: 55px;
+
+            right: 10px;
+            bottom: 0;
+        }
+
+        .cloud.one {
+            top: 110px;
+            left: -150px;
+        }
+
+        .cloud.two {
+            top: 190px;
+            left: -300px;
+
+            transform: scale(.65);
+
+            animation-delay: 12s;
+        }
+
+        @keyframes cloudMove {
+            from {
+                left: -200px;
+            }
+
+            to {
+                left: 110%;
+            }
+        }
+
+        /* =====================================================
+   GROUND
+===================================================== */
+
+        .ground {
+            position: absolute;
+
+            left: 0;
+            bottom: 0;
+
+            width: 100%;
+            height: 32%;
+
+            background:
+                linear-gradient(to bottom,
+                    #dcecae,
+                    #c9e19a,
+                    #b9d582);
+
+            border-top:
+                3px solid rgba(255, 255, 255, .5);
+
+            z-index: 10;
+        }
+
+        /* =====================================================
+   FLOWERS
+===================================================== */
+
+        .flower {
+            position: absolute;
+
+            bottom: 25%;
+
+            font-size: 24px;
+
+            z-index: 15;
+
+            animation:
+                sway 2s infinite alternate;
+        }
+
+        .flower.one {
+            left: 7%;
+        }
+
+        .flower.two {
+            left: 25%;
+            animation-delay: .5s;
+        }
+
+        .flower.three {
+            right: 20%;
+            animation-delay: .8s;
+        }
+
+        .flower.four {
+            right: 7%;
+            animation-delay: 1.2s;
+        }
+
+        @keyframes sway {
+            from {
+                transform: rotate(-5deg);
+            }
+
+            to {
+                transform: rotate(5deg);
+            }
+        }
+
+        /* =====================================================
+   CHAPTER
+===================================================== */
+
+        .chapter {
+            position: absolute;
+
+            top: 15px;
+            left: 50%;
+
+            transform:
+                translateX(-50%);
+
+            color: #80666d;
+
+            font-size: 9px;
+
+            letter-spacing: 3px;
+
+            z-index: 100;
+        }
+
+        /* =====================================================
+   STORY BOARD
+===================================================== */
+
+        .board {
+            position: absolute;
+
+            top: 9%;
+            left: 50%;
+
+            width: 84vw;
+            max-width: 320px;
+
+            min-height: 92px;
+
+            padding:
+                16px 18px;
+
+            transform:
+                translateX(-50%) scale(.7);
+
+            opacity: 0;
+
+            background:
+                linear-gradient(145deg,
+                    #fffdf9,
+                    #fff0f4);
+
+            border:
+                2px solid #d9aeb8;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 5px 0 #d7b6bd,
+                0 15px 35px rgba(90, 50, 80, .18);
+
+            color: #765b63;
+
+            text-align: center;
+
+            font-size: 16px;
+
+            line-height: 1.5;
+
+            z-index: 90;
+
+            transition:
+                .6s ease;
+        }
+
+        .board.show {
+            opacity: 1;
+
+            transform:
+                translateX(-50%) scale(1);
+        }
+
+        .board::before {
+            content: "♡";
+
+            position: absolute;
+
+            top: 6px;
+            left: 10px;
+
+            color: #ed9daf;
+        }
+
+        /* =====================================================
+   CHARACTER
+===================================================== */
+
+        .character {
+            position: absolute;
+
+            width: 145px;
+            height: 220px;
+
+            left: -180px;
+            bottom: 23%;
+
+            z-index: 40;
+
+            pointer-events: none;
+        }
+
+        .bear {
+            position: absolute;
+
+            width: 110px;
+            height: 175px;
+
+            left: 18px;
+            top: 0;
+        }
+
+        /* =====================================================
+   EARS
+===================================================== */
+
+        .ear {
+            position: absolute;
+
+            width: 38px;
+            height: 38px;
+
+            background: #fffdf8;
+
+            border:
+                3px solid #81706a;
+
+            border-radius: 50%;
+        }
+
+        .ear.left {
+            left: 4px;
+            top: 2px;
+        }
+
+        .ear.right {
+            right: 4px;
+            top: 2px;
+        }
+
+        .ear::after {
+            content: "";
+
+            position: absolute;
+
+            width: 18px;
+            height: 18px;
+
+            left: 7px;
+            top: 7px;
+
+            background: #f5c7c1;
+
+            border-radius: 50%;
+        }
+
+        /* =====================================================
+   HEAD
+===================================================== */
+
+        .head {
+            position: absolute;
+
+            width: 96px;
+            height: 90px;
+
+            left: 7px;
+            top: 18px;
+
+            background: #fffdf8;
+
+            border:
+                3px solid #81706a;
+
+            border-radius: 48%;
+
+            z-index: 3;
+        }
+
+        /* =====================================================
+   FACE
+===================================================== */
+
+        .eye {
+            position: absolute;
+
+            width: 8px;
+            height: 11px;
+
+            top: 39px;
+
+            background: #75615e;
+
+            border-radius: 50%;
+        }
+
+        .eye.left {
+            left: 26px;
+        }
+
+        .eye.right {
+            right: 26px;
+        }
+
+        .cheek {
+            position: absolute;
+
+            width: 15px;
+            height: 9px;
+
+            top: 55px;
+
+            background: #f4a6a7;
+
+            border-radius: 50%;
+
+            opacity: .8;
+        }
+
+        .cheek.left {
+            left: 9px;
+        }
+
+        .cheek.right {
+            right: 9px;
+        }
+
+        .nose {
+            position: absolute;
+
+            width: 7px;
+            height: 5px;
+
+            left: 44px;
+            top: 52px;
+
+            background: #79615e;
+
+            border-radius: 50%;
+        }
+
+        .mouth {
+            position: absolute;
+
+            width: 14px;
+            height: 9px;
+
+            left: 40px;
+            top: 58px;
+
+            border-bottom:
+                2px solid #79615e;
+
+            border-radius: 50%;
+        }
+
+        /* =====================================================
+   BODY
+===================================================== */
+
+        .body {
+            position: absolute;
+
+            width: 78px;
+            height: 74px;
+
+            left: 16px;
+            top: 105px;
+
+            background: #fffdf8;
+
+            border:
+                3px solid #81706a;
+
+            border-radius: 45%;
+        }
+
+        /* =====================================================
+   VINAYAK CAP
+===================================================== */
+
+        .cap {
+            position: absolute;
+
+            width: 80px;
+            height: 23px;
+
+            left: 8px;
+            top: 9px;
+
+            background: #efb87e;
+
+            border:
+                3px solid #81706a;
+
+            border-radius: 50%;
+
+            transform:
+                rotate(-5deg);
+
+            z-index: 7;
+        }
+
+        .cap::after {
+            content: "♥";
+
+            position: absolute;
+
+            left: 33px;
+            top: 0;
+
+            color: white;
+
+            font-size: 13px;
+        }
+
+        /* =====================================================
+   DIUU BOW
+===================================================== */
+
+        .bow {
+            position: absolute;
+
+            width: 35px;
+            height: 25px;
+
+            left: 42px;
+            top: 97px;
+
+            z-index: 8;
+        }
+
+        .bow::before,
+        .bow::after {
+            content: "";
+
+            position: absolute;
+
+            width: 21px;
+            height: 21px;
+
+            background: #f39ba8;
+
+            border:
+                2px solid #81706a;
+
+            border-radius: 60% 30%;
+        }
+
+        .bow::before {
+            left: -2px;
+
+            transform:
+                rotate(35deg);
+        }
+
+        .bow::after {
+            right: -2px;
+
+            transform:
+                rotate(-35deg);
+        }
+
+        .bow-center {
+            position: absolute;
+
+            width: 10px;
+            height: 10px;
+
+            left: 12px;
+            top: 7px;
+
+            background: #e98594;
+
+            border-radius: 50%;
+        }
+
+        /* =====================================================
+   DIUU FLOWERS
+===================================================== */
+
+        .flowers {
+            position: absolute;
+
+            left: 82px;
+            top: 75px;
+
+            font-size: 25px;
+
+            z-index: 10;
+        }
+
+        /* =====================================================
+   ARMS
+===================================================== */
+
+        .arm {
+            position: absolute;
+
+            width: 22px;
+            height: 53px;
+
+            top: 110px;
+
+            background: #fffdf8;
+
+            border:
+                3px solid #81706a;
+
+            border-radius: 50px;
+
+            transform-origin:
+                top center;
+        }
+
+        .arm.left {
+            left: 3px;
+        }
+
+        .arm.right {
+            right: 3px;
+        }
+
+        /* =====================================================
+   STATIC LEGS
+===================================================== */
+
+        .leg {
+            position: absolute;
+
+            width: 20px;
+            height: 43px;
+
+            top: 164px;
+
+            background: #fffdf8;
+
+            border:
+                3px solid #81706a;
+
+            border-radius: 50px;
+
+            animation: none !important;
+            transform: none !important;
+        }
+
+        .leg.left {
+            left: 24px;
+        }
+
+        .leg.right {
+            right: 24px;
+        }
+
+        /* =====================================================
+   WALKING - ARMS ONLY
+===================================================== */
+
+        .walking .arm.left {
+            animation:
+                armLeft .35s infinite alternate;
+        }
+
+        .walking .arm.right {
+            animation:
+                armRight .35s infinite alternate;
+        }
+
+        .walking .leg {
+            animation: none !important;
+            transform: none !important;
+        }
+
+        @keyframes armLeft {
+            from {
+                transform: rotate(20deg);
+            }
+
+            to {
+                transform: rotate(-20deg);
+            }
+        }
+
+        @keyframes armRight {
+            from {
+                transform: rotate(-20deg);
+            }
+
+            to {
+                transform: rotate(20deg);
+            }
+        }
+
+        /* =====================================================
+   CHARACTER WALK
+===================================================== */
+
+        .enter-left {
+            animation:
+                enterLeft 3s ease forwards;
+        }
+
+        .enter-right {
+            animation:
+                enterRight 3s ease forwards;
+        }
+
+        .leave-left {
+            animation:
+                leaveLeft 2.5s ease forwards;
+        }
+
+        .leave-right {
+            animation:
+                leaveRight 2.5s ease forwards;
+        }
+
+        @keyframes enterLeft {
+            from {
+                left: -180px;
+            }
+
+            to {
+                left:
+                    calc(50% - 72px);
+            }
+        }
+
+        @keyframes enterRight {
+            from {
+                left: 110%;
+            }
+
+            to {
+                left:
+                    calc(50% - 72px);
+            }
+        }
+
+        @keyframes leaveLeft {
+            from {
+                left:
+                    calc(50% - 72px);
+            }
+
+            to {
+                left: -180px;
+            }
+        }
+
+        @keyframes leaveRight {
+            from {
+                left:
+                    calc(50% - 72px);
+            }
+
+            to {
+                left: 110%;
+            }
+        }
+
+        /* =====================================================
+   CAT OLLIE
+===================================================== */
+
+        .cat {
+            position: absolute;
+
+            width: 115px;
+            height: 105px;
+
+            bottom: 23%;
+            left: -140px;
+
+            z-index: 45;
+
+            display: none;
+        }
+
+        .cat-body {
+            position: absolute;
+
+            width: 72px;
+            height: 55px;
+
+            left: 24px;
+            bottom: 4px;
+
+            background: #f1c99d;
+
+            border:
+                3px solid #81706a;
+
+            border-radius: 50%;
+        }
+
+        .cat-head {
+            position: absolute;
+
+            width: 62px;
+            height: 62px;
+
+            left: 5px;
+            bottom: 46px;
+
+            background: #f7d5ac;
+
+            border:
+                3px solid #81706a;
+
+            border-radius: 50%;
+
+            z-index: 3;
+        }
+
+        .cat-head::before,
+        .cat-head::after {
+            content: "";
+
+            position: absolute;
+
+            width: 25px;
+            height: 25px;
+
+            top: -11px;
+
+            background: #f7d5ac;
+
+            border:
+                3px solid #81706a;
+
+            transform:
+                rotate(45deg);
+
+            z-index: -1;
+        }
+
+        .cat-head::before {
+            left: 1px;
+        }
+
+        .cat-head::after {
+            right: 1px;
+        }
+
+        .cat-eye {
+            position: absolute;
+
+            width: 8px;
+            height: 10px;
+
+            top: 21px;
+
+            background: #695955;
+
+            border-radius: 50%;
+        }
+
+        .cat-eye.left {
+            left: 16px;
+        }
+
+        .cat-eye.right {
+            right: 16px;
+        }
+
+        .cat-tail {
+            position: absolute;
+
+            width: 45px;
+            height: 48px;
+
+            right: -15px;
+            bottom: 27px;
+
+            border:
+                6px solid #f1c99d;
+
+            border-left: 0;
+
+            border-radius:
+                0 50% 50% 0;
+
+            animation:
+                catTail .5s infinite alternate;
+        }
+
+        @keyframes catTail {
+            from {
+                transform: rotate(-20deg);
+            }
+
+            to {
+                transform: rotate(25deg);
+            }
+        }
+
+        .cat.walk {
+            animation:
+                catWalk 4s ease forwards;
+        }
+
+        @keyframes catWalk {
+            from {
+                left: -140px;
+            }
+
+            to {
+                left:
+                    calc(50% + 65px);
+            }
+        }
+
+        /* =====================================================
+   DOG CHAARVI
+===================================================== */
+
+        .dog {
+            position: absolute;
+
+            width: 130px;
+            height: 110px;
+
+            bottom: 23%;
+            right: -150px;
+
+            z-index: 45;
+
+            display: none;
+        }
+
+        .dog-body {
+            position: absolute;
+
+            width: 82px;
+            height: 58px;
+
+            left: 28px;
+            bottom: 4px;
+
+            background: #d8aa78;
+
+            border:
+                3px solid #81706a;
+
+            border-radius: 50%;
+        }
+
+        .dog-head {
+            position: absolute;
+
+            width: 68px;
+            height: 68px;
+
+            left: 3px;
+            bottom: 42px;
+
+            background: #e1b585;
+
+            border:
+                3px solid #81706a;
+
+            border-radius: 50%;
+
+            z-index: 3;
+        }
+
+        .dog-ear {
+            position: absolute;
+
+            width: 27px;
+            height: 45px;
+
+            top: 8px;
+
+            background: #a57858;
+
+            border-radius: 50%;
+        }
+
+        .dog-ear.left {
+            left: -8px;
+
+            transform:
+                rotate(25deg);
+        }
+
+        .dog-ear.right {
+            right: -8px;
+
+            transform:
+                rotate(-25deg);
+        }
+
+        .dog-eye {
+            position: absolute;
+
+            width: 8px;
+            height: 10px;
+
+            top: 23px;
+
+            background: #65524c;
+
+            border-radius: 50%;
+        }
+
+        .dog-eye.left {
+            left: 15px;
+        }
+
+        .dog-eye.right {
+            right: 15px;
+        }
+
+        .dog-nose {
+            position: absolute;
+
+            width: 13px;
+            height: 10px;
+
+            bottom: 14px;
+            left: 25px;
+
+            background: #55433e;
+
+            border-radius: 50%;
+        }
+
+        .dog-tail {
+            position: absolute;
+
+            width: 42px;
+            height: 28px;
+
+            right: -15px;
+            bottom: 33px;
+
+            border:
+                6px solid #d8aa78;
+
+            border-left: 0;
+
+            border-radius:
+                0 50% 50% 0;
+
+            animation:
+                dogTail .3s infinite alternate;
+        }
+
+        @keyframes dogTail {
+            from {
+                transform:
+                    rotate(-35deg);
+            }
+
+            to {
+                transform:
+                    rotate(30deg);
+            }
+        }
+
+        .dog.run {
+            animation:
+                dogRun 3s ease forwards;
+        }
+
+        @keyframes dogRun {
+            from {
+                right: -150px;
+            }
+
+            to {
+                right:
+                    calc(50% + 70px);
+            }
+        }
+
+        /* =====================================================
+   START SCREEN
+===================================================== */
+
+        .start-screen {
+            position: absolute;
+
+            inset: 0;
+
+            z-index: 300;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 24px;
+
+            background:
+                linear-gradient(135deg,
+                    #ffe8f0,
+                    #ead9ec,
+                    #c7c5e3);
+
+            transition:
+                opacity 1s;
+        }
+
+        .start-screen.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .start-character {
+            font-size: 75px;
+
+            animation:
+                startBounce 1.5s infinite alternate;
+        }
+
+        @keyframes startBounce {
+            from {
+                transform:
+                    translateY(0);
+            }
+
+            to {
+                transform:
+                    translateY(-10px);
+            }
+        }
+
+        .start-screen h1 {
+            margin-top: 15px;
+
+            color: #80625c;
+
+            font-size: 32px;
+        }
+
+        .start-screen p {
+            margin-top: 10px;
+
+            max-width: 350px;
+
+            color: #917570;
+
+            font-size: 16px;
+
+            line-height: 1.6;
+        }
+
+        .start-btn {
+            margin-top: 24px;
+
+            padding:
+                13px 28px;
+
+            border:
+                2px solid #b78b84;
+
+            border-radius:
+                30px;
+
+            background:
+                #fffaf4;
+
+            color:
+                #7d5c56;
+
+            font-family:
+                inherit;
+
+            font-size:
+                17px;
+
+            box-shadow:
+                0 5px 0 #d7bcb2;
+        }
+
+        /* =====================================================
+   FINAL STORY
+===================================================== */
+
+        .final {
+            position: absolute;
+
+            inset: 0;
+
+            z-index: 280;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 22px;
+
+            background:
+                radial-gradient(circle at 50% 30%,
+                    #fff5f8,
+                    #f6dce9 45%,
+                    #d6c5df 100%);
+
+            opacity: 0;
+
+            pointer-events: none;
+
+            transition:
+                opacity 1s;
+        }
+
+        .final.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .final-characters {
+            font-size: 60px;
+
+            animation:
+                finalBounce 1.5s infinite alternate;
+        }
+
+        @keyframes finalBounce {
+            from {
+                transform:
+                    translateY(0);
+            }
+
+            to {
+                transform:
+                    translateY(-8px);
+            }
+        }
+
+        .final h1 {
+            color: #80625c;
+
+            font-size: 27px;
+
+            margin-top: 12px;
+        }
+
+        .final p {
+            max-width: 340px;
+
+            color: #917570;
+
+            font-size: 16px;
+
+            line-height: 1.6;
+
+            margin-top: 12px;
+        }
+
+        .final button {
+            margin-top: 22px;
+
+            padding:
+                12px 24px;
+
+            border:
+                2px solid #b78b84;
+
+            border-radius:
+                30px;
+
+            background:
+                #fffaf4;
+
+            color:
+                #7d5c56;
+
+            font-family:
+                inherit;
+
+            font-size:
+                16px;
+        }
+
+        /* =====================================================
+   QUESTION OVERLAY
+===================================================== */
+
+        .question-overlay {
+            position: absolute;
+
+            inset: 0;
+
+            z-index: 400;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 20px;
+
+            background:
+                rgba(75, 45, 70, .40);
+
+            backdrop-filter:
+                blur(9px);
+
+            -webkit-backdrop-filter:
+                blur(9px);
+
+            opacity: 0;
+
+            pointer-events: none;
+
+            transition:
+                opacity .6s;
+        }
+
+        .question-overlay.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .question-card {
+            width:
+                min(390px, 92vw);
+
+            padding:
+                28px 22px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(145deg,
+                    #fffdf9,
+                    #fff0f5);
+
+            border-radius:
+                27px;
+
+            box-shadow:
+                0 25px 70px rgba(80, 45, 75, .28);
+
+            transform:
+                scale(.85) translateY(25px);
+
+            transition:
+                .6s;
+        }
+
+        .question-overlay.show .question-card {
+            transform:
+                scale(1) translateY(0);
+        }
+
+        .question-heart {
+            font-size: 55px;
+
+            margin-bottom: 10px;
+
+            animation:
+                heartbeat 1.4s infinite;
+        }
+
+        @keyframes heartbeat {
+            50% {
+                transform:
+                    scale(1.15);
+            }
+        }
+
+        .question-card h2 {
+            color: #795d66;
+
+            font-size: 23px;
+
+            line-height: 1.35;
+        }
+
+        .question-card p {
+            color: #98757e;
+
+            font-size: 16px;
+
+            line-height: 1.6;
+
+            margin-top: 12px;
+        }
+
+        .question-buttons {
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            gap:
+                11px;
+
+            margin-top:
+                22px;
+        }
+
+        .question-buttons button {
+            width: 100%;
+
+            padding:
+                12px 15px;
+
+            border-radius:
+                25px;
+
+            font-family:
+                inherit;
+
+            font-size:
+                16px;
+
+            cursor:
+                pointer;
+        }
+
+        .yes-btn {
+            border:
+                2px solid #d99aaa;
+
+            background:
+                linear-gradient(135deg,
+                    #f5b7c9,
+                    #e997b0);
+
+            color:
+                white;
+
+            box-shadow:
+                0 4px 0 #cf849b;
+        }
+
+        .no-btn {
+            border:
+                2px solid #d5bbc3;
+
+            background:
+                white;
+
+            color:
+                #866d75;
+        }
+
+        /* =====================================================
+   SONG PERMISSION
+===================================================== */
+
+        .song-overlay {
+            position: absolute;
+
+            inset: 0;
+
+            z-index: 500;
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            align-items:
+                center;
+
+            padding:
+                20px;
+
+            background:
+                rgba(70, 40, 70, .42);
+
+            backdrop-filter:
+                blur(10px);
+
+            -webkit-backdrop-filter:
+                blur(10px);
+
+            opacity:
+                0;
+
+            pointer-events:
+                none;
+
+            transition:
+                opacity .6s;
+        }
+
+        .song-overlay.show {
+            opacity:
+                1;
+
+            pointer-events:
+                auto;
+        }
+
+        .song-card {
+            width:
+                min(390px, 92vw);
+
+            padding:
+                30px 22px;
+
+            text-align:
+                center;
+
+            background:
+                linear-gradient(145deg,
+                    #fffdf9,
+                    #fff0f5);
+
+            border-radius:
+                28px;
+
+            box-shadow:
+                0 25px 70px rgba(80, 45, 75, .3);
+
+            transform:
+                scale(.85);
+
+            transition:
+                .6s;
+        }
+
+        .song-overlay.show .song-card {
+            transform:
+                scale(1);
+        }
+
+        .song-heart {
+            font-size:
+                45px;
+
+            margin-bottom:
+                12px;
+
+            animation:
+                heartbeat 1.4s infinite;
+        }
+
+        .song-card h2 {
+            color:
+                #785d66;
+
+            font-size:
+                24px;
+        }
+
+        .cheesy {
+            color:
+                #a27b84 !important;
+
+            font-size:
+                14px !important;
+        }
+
+        .permission-text {
+            color:
+                #765b63 !important;
+
+            font-size:
+                17px !important;
+
+            line-height:
+                1.6;
+
+            margin-top:
+                12px;
+        }
+
+        .song-actions {
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            gap:
+                11px;
+
+            margin-top:
+                22px;
+        }
+
+        .song-actions button {
+            width:
+                100%;
+
+            padding:
+                12px;
+
+            border-radius:
+                25px;
+
+            font-family:
+                inherit;
+
+            font-size:
+                16px;
+        }
+
+        .song-yes {
+            border:
+                2px solid #d99aaa;
+
+            background:
+                linear-gradient(135deg,
+                    #f5b7c9,
+                    #e997b0);
+
+            color:
+                white;
+
+            box-shadow:
+                0 4px 0 #cf849b;
+        }
+
+        .song-no {
+            border:
+                2px solid #d5bbc3;
+
+            background:
+                white;
+
+            color:
+                #866d75;
+        }
+
+        /* =====================================================
+   APPLE MUSIC PLAYER
+===================================================== */
+
+        .music-player-overlay {
+            position: absolute;
+
+            inset: 0;
+
+            z-index: 600;
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            align-items:
+                center;
+
+            padding:
+                15px;
+
+            background:
+                rgba(65, 40, 65, .45);
+
+            backdrop-filter:
+                blur(10px);
+
+            -webkit-backdrop-filter:
+                blur(10px);
+
+            opacity:
+                0;
+
+            pointer-events:
+                none;
+
+            transition:
+                opacity .6s;
+        }
+
+        .music-player-overlay.show {
+            opacity:
+                1;
+
+            pointer-events:
+                auto;
+        }
+
+        .music-player-card {
+            width:
+                min(430px, 94vw);
+
+            max-height:
+                92vh;
+
+            overflow-y:
+                auto;
+
+            padding:
+                25px 15px 22px;
+
+            text-align:
+                center;
+
+            background:
+                linear-gradient(145deg,
+                    #fffdf9,
+                    #fff0f5);
+
+            border-radius:
+                27px;
+
+            box-shadow:
+                0 25px 80px rgba(70, 40, 70, .3);
+
+            transform:
+                scale(.85);
+
+            transition:
+                .6s;
+        }
+
+        .music-player-overlay.show .music-player-card {
+            transform:
+                scale(1);
+        }
+
+        .music-heart {
+            font-size:
+                48px;
+
+            animation:
+                heartbeat 1.4s infinite;
+        }
+
+        .music-player-card h2 {
+            margin-top:
+                8px;
+
+            color:
+                #795d66;
+
+            font-size:
+                22px;
+
+            line-height:
+                1.35;
+        }
+
+        .music-player-card p {
+            margin-top:
+                8px;
+
+            color:
+                #98757e;
+
+            font-size:
+                14px;
+
+            line-height:
+                1.5;
+        }
+
+        .song-name {
+            display:
+                inline-block;
+
+            padding:
+                7px 14px;
+
+            background:
+                #ffe3ec;
+
+            border-radius:
+                20px;
+
+            color:
+                #805966 !important;
+
+            font-weight:
+                bold;
+        }
+
+        .music-player-card iframe {
+            width:
+                100%;
+
+            height:
+                175px;
+
+            margin-top:
+                16px;
+
+            border-radius:
+                10px;
+        }
+
+        .close-music {
+            margin-top:
+                15px;
+
+            padding:
+                11px 25px;
+
+            border:
+                2px solid #d7a1ae;
+
+            border-radius:
+                25px;
+
+            background:
+                white;
+
+            color:
+                #795d66;
+
+            font-family:
+                inherit;
+
+            font-size:
+                15px;
+        }
+
+        /* =====================================================
+   HEART PARTICLES
+===================================================== */
+
+        .heart {
+            position:
+                absolute;
+
+            bottom:
+                -30px;
+
+            z-index:
+                700;
+
+            pointer-events:
+                none;
+
+            animation:
+                floatHeart 5s linear forwards;
+        }
+
+        @keyframes floatHeart {
+            from {
+                transform:
+                    translateY(0) rotate(0);
+
+                opacity:
+                    1;
+            }
+
+            to {
+                transform:
+                    translateY(-110vh) rotate(360deg);
+
+                opacity:
+                    0;
+            }
+        }
+
+
+        /* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+        @media (max-height:650px) {
+
+            .character,
+            .cat,
+            .dog {
+                bottom:
+                    19%;
+            }
+
+            .ground {
+                height:
+                    30%;
+            }
+
+            .board {
+                top:
+                    7%;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div id="app">
+
+        <div class="glow"></div>
+
+        <div class="moon"></div>
+
+        <div class="cloud one"></div>
+        <div class="cloud two"></div>
+
+
+        <div class="stars">
+            <span>✦</span>
+            <span>✧</span>
+            <span>⋆</span>
+            <span>✦</span>
+            <span>♡</span>
+            <span>✧</span>
+            <span>⋆</span>
+        </div>
+
+
+        <div class="ground"></div>
+
+
+        <div class="flower one">🌷</div>
+        <div class="flower two">🌸</div>
+        <div class="flower three">🌼</div>
+        <div class="flower four">🌷</div>
+
+
+        <div class="chapter" id="chapter">
+            CHAPTER 01
+        </div>
+
+
+        <!-- STORY BOARD -->
+
+        <div class="board" id="board">
+
+            <span id="boardText"></span>
+
+        </div>
+
+
+        <!-- =================================================
+         VINAYAK / DIUU
+    ================================================== -->
+
+        <div class="character" id="character">
+
+            <div class="bear">
+
+                <div class="ear left"></div>
+                <div class="ear right"></div>
+
+                <div class="head">
+
+                    <div class="eye left"></div>
+                    <div class="eye right"></div>
+
+                    <div class="cheek left"></div>
+                    <div class="cheek right"></div>
+
+                    <div class="nose"></div>
+
+                    <div class="mouth"></div>
+
+                </div>
+
+
+                <div class="body"></div>
+
+
+                <div class="arm left"></div>
+                <div class="arm right"></div>
+
+
+                <!-- THESE LEGS NEVER MOVE -->
+
+                <div class="leg left"></div>
+                <div class="leg right"></div>
+
+
+                <div class="cap" id="cap">
+                </div>
+
+
+                <div class="bow" id="bow">
+
+                    <div class="bow-center"></div>
+
+                </div>
+
+
+                <div class="flowers" id="flowers">
+
+                    🌷🌷
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+         OLLIE THE CAT
+    ================================================== -->
+
+        <div class="cat" id="cat">
+
+            <div class="cat-body"></div>
+
+            <div class="cat-head">
+
+                <div class="cat-eye left"></div>
+                <div class="cat-eye right"></div>
+
+            </div>
+
+            <div class="cat-tail"></div>
+
+        </div>
+
+
+        <!-- =================================================
+         CHAARVI THE DOG
+    ================================================== -->
+
+        <div class="dog" id="dog">
+
+            <div class="dog-body"></div>
+
+            <div class="dog-head">
+
+                <div class="dog-ear left"></div>
+                <div class="dog-ear right"></div>
+
+                <div class="dog-eye left"></div>
+                <div class="dog-eye right"></div>
+
+                <div class="dog-nose"></div>
+
+            </div>
+
+            <div class="dog-tail"></div>
+
+        </div>
+
+
+        <!-- =================================================
+         START
+    ================================================== -->
+
+        <div class="start-screen" id="startScreen">
+
+            <div class="start-character">
+                🧸🌷
+            </div>
+
+            <h1>
+                A little story...
+            </h1>
+
+            <p>
+
+                A little story about
+                Vinayak, Diuu,
+                Ollie & Chaarvi. ❤️
+
+                <br><br>
+
+                There's something
+                I want to tell you...
+
+            </p>
+
+            <button class="start-btn" id="startBtn">
+
+                Open the story ❤️
+
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+         FINAL STORY
+    ================================================== -->
+
+        <div class="final" id="final">
+
+            <div class="final-characters">
+                🧸 ❤️ 🧸
+            </div>
+
+            <h1>
+                And then there was Diuu...
+            </h1>
+
+            <p>
+
+                Vinayak was once walking
+                through life alone.
+
+                <br><br>
+
+                Then Diuu came along.
+
+                <br><br>
+
+                And somehow,
+                ordinary days became
+                beautiful days.
+
+                <br><br>
+
+                More smiles.
+                More laughter.
+                More little moments.
+
+                <br><br>
+
+                And now...
+                he's really enjoying life. ❤️
+
+            </p>
+
+            <button id="storyQuestionBtn">
+
+                I have one question... ❤️
+
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+         QUESTION 1
+    ================================================== -->
+
+        <div class="question-overlay" id="storyQuestion">
+
+            <div class="question-card">
+
+                <div class="question-heart">
+                    🥹❤️
+                </div>
+
+                <h2>
+                    Diuu...
+                    did you like our little story?
+                </h2>
+
+                <p>
+
+                    I know it might be a little
+                    cheesy...
+
+                    <br>
+
+                    but I made it especially
+                    for you. 🌷
+
+                </p>
+
+                <div class="question-buttons">
+
+                    <button class="yes-btn" id="likedYes">
+
+                        Yes, I loved it ❤️
+
+                    </button>
+
+                    <button class="no-btn" id="likedMaybe">
+
+                        It was cute 🙈
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+         QUESTION 2
+    ================================================== -->
+
+        <div class="question-overlay" id="foreverQuestion">
+
+            <div class="question-card">
+
+                <div class="question-heart">
+                    🌷
+                </div>
+
+                <h2>
+                    And one more question...
+                </h2>
+
+                <p>
+
+                    If Vinayak keeps making you
+                    smile...
+
+                    <br><br>
+
+                    Will you stay in his story
+                    forever? ❤️
+
+                </p>
+
+                <div class="question-buttons">
+
+                    <button class="yes-btn" id="foreverYes">
+
+                        Yes, forever ❤️
+
+                    </button>
+
+                    <button class="no-btn" id="foreverMaybe">
+
+                        Let me think 🙈
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+         FOREVER RESPONSE
+    ================================================== -->
+
+        <div class="question-overlay" id="foreverResponse">
+
+            <div class="question-card">
+
+                <div class="question-heart">
+                    🥹🌷
+                </div>
+
+                <h2>
+                    That's okay...
+                </h2>
+
+                <p>
+
+                    Take all the time you need.
+
+                    <br><br>
+
+                    I'll just keep this little
+                    place for you in my story. ❤️
+
+                </p>
+
+                <div class="question-buttons">
+
+                    <button class="yes-btn" id="responseContinue">
+
+                        Continue... 🎶
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+         SONG PERMISSION
+    ================================================== -->
+
+        <div class="song-overlay" id="songOverlay">
+
+            <div class="song-card">
+
+                <div class="song-heart">
+                    🎶
+                </div>
+
+                <h2>
+                    One last little thing...
+                </h2>
+
+                <p class="cheesy">
+                    I know it's too cheesy... 🥹
+                </p>
+
+                <p class="permission-text">
+
+                    But I want to dedicate
+                    a song to you. ❤️
+
+                    <br><br>
+
+                    If you give me permission,
+                    can I play it for you?
+
+                </p>
+
+                <div class="song-actions">
+
+                    <button class="song-yes" id="songYes">
+
+                        Yes... play it ❤️
+
+                    </button>
+
+                    <button class="song-no" id="songNo">
+
+                        Maybe later 🙈
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+         APPLE MUSIC
+    ================================================== -->
+
+        <div class="music-player-overlay" id="musicPlayerOverlay">
+
+            <div class="music-player-card">
+
+                <div class="music-heart">
+                    ❤️
+                </div>
+
+                <h2>
+                    This one is for you, Diuu...
+                </h2>
+
+                <p>
+                    Put your headphones on... 🎧
+                </p>
+
+                <p class="song-name">
+                    🎵 Teri Hogaiyaan
+                </p>
+
+
+                <!-- YOUR APPLE MUSIC EMBED -->
+
+                <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0"
+                    height="175" style="
+                    width:100%;
+                    max-width:660px;
+                    overflow:hidden;
+                    border-radius:10px;
+                    margin-top:16px;
+                " sandbox="
+                    allow-forms
+                    allow-popups
+                    allow-same-origin
+                    allow-scripts
+                    allow-storage-access-by-user-activation
+                    allow-top-navigation-by-user-activation
+                " src="https://embed.music.apple.com/us/song/teri-hogaiyaan/1570754917">
+                </iframe>
+
+
+                <p>
+
+                    🎶 Tap ▶ on the player
+                    when you're ready.
+
+                </p>
+
+
+                <button class="close-music" id="closeMusic">
+
+                    ❤️ Continue
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        /* =====================================================
+           STORY
+        ===================================================== */
+
+        const scenes = [
+
+            {
+                character: "vinayak",
+                direction: "left",
+                message:
+                    "Once upon a time... there was a little bear named Vinayak. 🧸"
+            },
+
+            {
+                character: "vinayak",
+                direction: "left",
+                message:
+                    "He had a normal life... but sometimes, it felt a little lonely."
+            },
+
+            {
+                character: "cat",
+                message:
+                    "Then came Ollie... a tiny cat who kept him company. 🐱"
+            },
+
+            {
+                character: "dog",
+                message:
+                    "And Chaarvi... the little dog who always brought some happiness. 🐶"
+            },
+
+            {
+                character: "vinayak",
+                direction: "left",
+                message:
+                    "But something was still missing..."
+            },
+
+            {
+                character: "diuu",
+                direction: "right",
+                message:
+                    "Then one ordinary day... someone special appeared. 🌷"
+            },
+
+            {
+                character: "vinayak",
+                direction: "left",
+                message:
+                    "Her name was Diuu. ❤️"
+            },
+
+            {
+                character: "diuu",
+                direction: "right",
+                message:
+                    "And somehow... everything started feeling different."
+            },
+
+            {
+                character: "vinayak",
+                direction: "left",
+                message:
+                    "There were more conversations..."
+            },
+
+            {
+                character: "diuu",
+                direction: "right",
+                message:
+                    "More laughter..."
+            },
+
+            {
+                character: "cat",
+                message:
+                    "Ollie noticed Vinayak was smiling more. 🐱❤️"
+            },
+
+            {
+                character: "dog",
+                message:
+                    "Chaarvi definitely noticed too. 🐶💕"
+            },
+
+            {
+                character: "vinayak",
+                direction: "left",
+                message:
+                    "The lonely days slowly became happy days."
+            },
+
+            {
+                character: "diuu",
+                direction: "right",
+                message:
+                    "And life became a little more beautiful. 🌷"
+            },
+
+            {
+                character: "vinayak",
+                direction: "left",
+                message:
+                    "Because sometimes... one person can change everything. ❤️"
+            }
+
+        ];
+
+
+        /* =====================================================
+           ELEMENTS
+        ===================================================== */
+
+        const character =
+            document.getElementById("character");
+
+        const board =
+            document.getElementById("board");
+
+        const boardText =
+            document.getElementById("boardText");
+
+        const chapter =
+            document.getElementById("chapter");
+
+        const cat =
+            document.getElementById("cat");
+
+        const dog =
+            document.getElementById("dog");
+
+        const cap =
+            document.getElementById("cap");
+
+        const bow =
+            document.getElementById("bow");
+
+        const flowers =
+            document.getElementById("flowers");
+
+        const startScreen =
+            document.getElementById("startScreen");
+
+        const startBtn =
+            document.getElementById("startBtn");
+
+        const final =
+            document.getElementById("final");
+
+        const storyQuestionBtn =
+            document.getElementById(
+                "storyQuestionBtn"
+            );
+
+        const storyQuestion =
+            document.getElementById(
+                "storyQuestion"
+            );
+
+        const likedYes =
+            document.getElementById(
+                "likedYes"
+            );
+
+        const likedMaybe =
+            document.getElementById(
+                "likedMaybe"
+            );
+
+        const foreverQuestion =
+            document.getElementById(
+                "foreverQuestion"
+            );
+
+        const foreverYes =
+            document.getElementById(
+                "foreverYes"
+            );
+
+        const foreverMaybe =
+            document.getElementById(
+                "foreverMaybe"
+            );
+
+        const foreverResponse =
+            document.getElementById(
+                "foreverResponse"
+            );
+
+        const responseContinue =
+            document.getElementById(
+                "responseContinue"
+            );
+
+        const songOverlay =
+            document.getElementById(
+                "songOverlay"
+            );
+
+        const songYes =
+            document.getElementById(
+                "songYes"
+            );
+
+        const songNo =
+            document.getElementById(
+                "songNo"
+            );
+
+        const musicPlayerOverlay =
+            document.getElementById(
+                "musicPlayerOverlay"
+            );
+
+        const closeMusic =
+            document.getElementById(
+                "closeMusic"
+            );
+
+
+        let currentScene = 0;
+
+        let running = false;
+
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        function resetCharacters() {
+
+            character.className =
+                "character";
+
+            cat.classList.remove(
+                "walk"
+            );
+
+            dog.classList.remove(
+                "run"
+            );
+
+            board.classList.remove(
+                "show"
+            );
+
+            cap.style.display =
+                "none";
+
+            bow.style.display =
+                "none";
+
+            flowers.style.display =
+                "none";
+
+
+            void character.offsetWidth;
+            void cat.offsetWidth;
+            void dog.offsetWidth;
+        }
+
+
+        /* =====================================================
+           START
+        ===================================================== */
+
+        startBtn.addEventListener(
+            "click",
+            () => {
+
+                startScreen.classList.add(
+                    "hide"
+                );
+
+                setTimeout(
+                    () => {
+
+                        running = true;
+
+                        currentScene = 0;
+
+                        playScene();
+
+                    },
+                    700
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           PLAY SCENE
+        ===================================================== */
+
+        function playScene() {
+
+            if (!running) {
+                return;
+            }
+
+
+            if (
+                currentScene >=
+                scenes.length
+            ) {
+
+                finishStory();
+
+                return;
+            }
+
+
+            const data =
+                scenes[currentScene];
+
+
+            chapter.textContent =
+                "CHAPTER " +
+                String(
+                    currentScene + 1
+                ).padStart(
+                    2,
+                    "0"
+                );
+
+
+            resetCharacters();
+
+
+            /* CAT */
+
+            if (
+                data.character ===
+                "cat"
+            ) {
+
+                cat.style.display =
+                    "block";
+
+                void cat.offsetWidth;
+
+                cat.classList.add(
+                    "walk"
+                );
+            }
+
+
+            /* DOG */
+
+            else if (
+                data.character ===
+                "dog"
+            ) {
+
+                dog.style.display =
+                    "block";
+
+                void dog.offsetWidth;
+
+                dog.classList.add(
+                    "run"
+                );
+            }
+
+
+            /* VINAYAK / DIUU */
+
+            else {
+
+                if (
+                    data.character ===
+                    "vinayak"
+                ) {
+
+                    cap.style.display =
+                        "block";
+                }
+
+
+                if (
+                    data.character ===
+                    "diuu"
+                ) {
+
+                    bow.style.display =
+                        "block";
+
+                    flowers.style.display =
+                        "block";
+                }
+
+
+                if (
+                    data.direction ===
+                    "right"
+                ) {
+
+                    character.classList.add(
+                        "enter-right"
+                    );
+
+                } else {
+
+                    character.classList.add(
+                        "enter-left"
+                    );
+                }
+
+
+                character.classList.add(
+                    "walking"
+                );
+            }
+
+
+            /* SHOW BOARD */
+
+            setTimeout(
+                () => {
+
+                    if (!running) {
+                        return;
+                    }
+
+                    boardText.textContent =
+                        data.message;
+
+                    board.classList.add(
+                        "show"
+                    );
+
+                },
+                3000
+            );
+
+
+            /* HIDE BOARD */
+
+            setTimeout(
+                () => {
+
+                    board.classList.remove(
+                        "show"
+                    );
+
+                },
+                6500
+            );
+
+
+            /* CHARACTER LEAVES */
+
+            setTimeout(
+                () => {
+
+                    if (!running) {
+                        return;
+                    }
+
+
+                    if (
+                        data.character ===
+                        "vinayak" ||
+
+                        data.character ===
+                        "diuu"
+                    ) {
+
+                        character.classList.remove(
+                            "enter-left",
+                            "enter-right",
+                            "walking"
+                        );
+
+
+                        void character.offsetWidth;
+
+
+                        if (
+                            data.direction ===
+                            "right"
+                        ) {
+
+                            character.classList.add(
+                                "leave-right"
+                            );
+
+                        } else {
+
+                            character.classList.add(
+                                "leave-left"
+                            );
+                        }
+                    }
+
+                },
+                6900
+            );
+
+
+            /* NEXT */
+
+            setTimeout(
+                () => {
+
+                    if (!running) {
+                        return;
+                    }
+
+                    currentScene++;
+
+                    playScene();
+
+                },
+                9200
+            );
+        }
+
+
+        /* =====================================================
+           FINISH STORY
+        ===================================================== */
+
+        function finishStory() {
+
+            running = false;
+
+            board.classList.remove(
+                "show"
+            );
+
+            character.className =
+                "character";
+
+            cat.classList.remove(
+                "walk"
+            );
+
+            dog.classList.remove(
+                "run"
+            );
+
+            createHearts(40);
+
+
+            setTimeout(
+                () => {
+
+                    final.classList.add(
+                        "show"
+                    );
+
+                },
+                800
+            );
+        }
+
+
+        /* =====================================================
+           STORY QUESTION
+        ===================================================== */
+
+        storyQuestionBtn.addEventListener(
+            "click",
+            () => {
+
+                final.classList.remove(
+                    "show"
+                );
+
+                storyQuestion.classList.add(
+                    "show"
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           LIKED - YES
+        ===================================================== */
+
+        likedYes.addEventListener(
+            "click",
+            () => {
+
+                storyQuestion.classList.remove(
+                    "show"
+                );
+
+                setTimeout(
+                    () => {
+
+                        foreverQuestion.classList.add(
+                            "show"
+                        );
+
+                    },
+                    500
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           LIKED - CUTE
+        ===================================================== */
+
+        likedMaybe.addEventListener(
+            "click",
+            () => {
+
+                storyQuestion.classList.remove(
+                    "show"
+                );
+
+                setTimeout(
+                    () => {
+
+                        foreverQuestion.classList.add(
+                            "show"
+                        );
+
+                    },
+                    500
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           FOREVER YES
+        ===================================================== */
+
+        foreverYes.addEventListener(
+            "click",
+            () => {
+
+                foreverQuestion.classList.remove(
+                    "show"
+                );
+
+                createHearts(50);
+
+                setTimeout(
+                    () => {
+
+                        songOverlay.classList.add(
+                            "show"
+                        );
+
+                    },
+                    800
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           FOREVER MAYBE
+        ===================================================== */
+
+        foreverMaybe.addEventListener(
+            "click",
+            () => {
+
+                foreverQuestion.classList.remove(
+                    "show"
+                );
+
+                setTimeout(
+                    () => {
+
+                        foreverResponse.classList.add(
+                            "show"
+                        );
+
+                    },
+                    500
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           RESPONSE CONTINUE
+        ===================================================== */
+
+        responseContinue.addEventListener(
+            "click",
+            () => {
+
+                foreverResponse.classList.remove(
+                    "show"
+                );
+
+                setTimeout(
+                    () => {
+
+                        songOverlay.classList.add(
+                            "show"
+                        );
+
+                    },
+                    500
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           SONG PERMISSION
+        ===================================================== */
+
+        songYes.addEventListener(
+            "click",
+            () => {
+
+                songOverlay.classList.remove(
+                    "show"
+                );
+
+                setTimeout(
+                    () => {
+
+                        musicPlayerOverlay.classList.add(
+                            "show"
+                        );
+
+                        createHearts(60);
+
+                    },
+                    600
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           SONG MAYBE LATER
+        ===================================================== */
+
+        songNo.addEventListener(
+            "click",
+            () => {
+
+                songOverlay.classList.remove(
+                    "show"
+                );
+
+                createSmallHeart();
+
+            }
+        );
+
+
+        /* =====================================================
+           CLOSE MUSIC
+        ===================================================== */
+
+        closeMusic.addEventListener(
+            "click",
+            () => {
+
+                musicPlayerOverlay.classList.remove(
+                    "show"
+                );
+
+            }
+        );
+
+
+        /* =====================================================
+           HEART PARTICLES
+        ===================================================== */
+
+        function createHeart() {
+
+            const heart =
+                document.createElement(
+                    "div"
+                );
+
+            heart.className =
+                "heart";
+
+
+            const symbols = [
+                "♡",
+                "♥",
+                "💕",
+                "🌷",
+                "✨"
+            ];
+
+
+            heart.textContent =
+                symbols[
+                Math.floor(
+                    Math.random() *
+                    symbols.length
+                )
+                ];
+
+
+            heart.style.left =
+                Math.random() *
+                100 +
+                "%";
+
+
+            heart.style.fontSize =
+                (
+                    18 +
+                    Math.random() * 22
+                ) +
+                "px";
+
+
+            document
+                .getElementById("app")
+                .appendChild(
+                    heart
+                );
+
+
+            setTimeout(
+                () => {
+
+                    heart.remove();
+
+                },
+                5200
+            );
+        }
+
+
+        /* =====================================================
+           HEART BURST
+        ===================================================== */
+
+        function createHearts(count) {
+
+            for (
+                let i = 0;
+                i < count;
+                i++
+            ) {
+
+                setTimeout(
+                    createHeart,
+                    i * 60
+                );
+            }
+        }
+
+
+        /* =====================================================
+           SMALL HEART
+        ===================================================== */
+
+        function createSmallHeart() {
+
+            const heart =
+                document.createElement(
+                    "div"
+                );
+
+            heart.className =
+                "heart";
+
+            heart.textContent =
+                "♡";
+
+            heart.style.left =
+                "50%";
+
+            heart.style.fontSize =
+                "32px";
+
+
+            document
+                .getElementById("app")
+                .appendChild(
+                    heart
+                );
+
+
+            setTimeout(
+                () => {
+
+                    heart.remove();
+
+                },
+                5000
+            );
+        }
+
+
+        /* =====================================================
+           AMBIENT HEARTS
+        ===================================================== */
+
+        setInterval(
+            () => {
+
+                if (running) {
+                    createHeart();
+                }
+
+            },
+            2500
+        );
+
+    </script>
+
+</body>
+
+</html>
